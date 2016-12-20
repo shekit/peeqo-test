@@ -21,5 +21,6 @@ module.exports = {
 	"r_gifjif":["gifjif.gif"],
 	"r_bye":["bye.gif"],
 	"r_what":["what.gif"],
-	"r_canthear":["canthear.gif"]
+	"r_canthear":["canthear.gif"],
+	"r_nerd":["nerd.gif"]
 }

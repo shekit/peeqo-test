@@ -5,6 +5,9 @@ $(document).ready(function(){
 	const path = require('path')
 	global.isSleeping = false
 	const ipcRenderer = require('electron').ipcRenderer
+
+	const natural = require('natural')
+	const tokenizer = new natural.WordTokenizer()
 	
 	const onlineStatus = require('js/check-online-status')()
 	
@@ -37,14 +40,84 @@ $(document).ready(function(){
 		},2000)
 	})
 
-	ipcRenderer.on("hotword", function(event,arg){
+	ipcRenderer.on("hotword", function(evt,arg){
 		console.log("HOTWORD",arg)
+		if(isSleeping){
+			event.emit("led", "fadeRed")
+		} else {
+			var obj = {
+				gif_type:null,  //local/remote/null
+				gif_category:null,
+				gif_url: null,
+				gif_loop_forever: false,
+				servo:"alert",
+				led:"alert",
+				sound:"alert",
+				sound_loop_forever: false,
+				callback: null
+			}
+
+			event.emit("animate", obj)
+		}
 	})
-	ipcRenderer.on("final-results", function(event,msg){
+	ipcRenderer.on("final-results", function(evt,msg){
 		console.log("FINAL", msg)
+		tokenizeAndSend(msg.toLowerCase())
+		event.emit('led','success')
 	})
-	ipcRenderer.on("partial-results", function(event, msg){
+	ipcRenderer.on("partial-results", function(evt, msg){
 		console.log("Partial", msg)
 	})
+
+	function tokenizeAndSend(string){
+		var words = tokenizer.tokenize(string)
+
+		if(words.includes("camera") && words.includes("on")){
+			console.log("TURN ON CAMERA")
+			event.emit('do',null,'cameraOn')
+		}
+		else if(words.includes("camera") && words.includes("off")){
+			event.emit('do',null,'cameraOff')
+		}
+		else if(words.includes("activate") && words.includes("spotify")){
+			event.emit('do',null,'addSkill')
+		}
+		else if(words.includes("play") && words.includes("beatles")){
+			event.emit('do',null,'playBeatles')
+		}
+		else if(words.includes("play") && words.includes("metallica")){
+			event.emit('do',null,'playRock')
+		}
+		else if(words.includes("you") && words.includes("well")){
+			event.emit('do',null,'didWell')
+		}
+		else if(words.includes("lights") && words.includes("off")){
+			event.emit('do',null,'lightsOff')
+		}
+		else if(words.includes("lights") && words.includes("on")){
+			event.emit('do',null,'lightsOn')
+		}
+		else if(words.includes("bye") && words.includes("everyone")){
+			event.emit('do',null,'sayBye')
+		}
+		else if(words.includes("say") && words.includes("hi")){
+			event.emit('do',null,'greetPublic')
+		}
+		else if(words.includes("go") && words.includes("reddit")){
+			event.emit('do',null,'blockReddit')
+		}
+		else if(words.includes("pronounced") && words.includes("gif")){
+			event.emit('do',null,'gifJif')
+		}
+		else if(words.includes("go") && words.includes("sleep")){
+			event.emit('do',null,'sleep')
+		}
+		else if(words.includes("wake") && words.includes("up")){
+			event.emit('do',null,'wakeUp')
+		} 
+		else {
+			event.emit('do',null,'unknown')
+		}
+	}
 
 })
