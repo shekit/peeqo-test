@@ -4,4 +4,4 @@
 .DS_Store
 npm-debug.log
 /app/images/downloaded/
-/app/images/local/old
+/app/images/
