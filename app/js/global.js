@@ -40,4 +40,11 @@ $(document).ready(function(){
 	ipcRenderer.on("hotword", function(event,arg){
 		console.log("HOTWORD",arg)
 	})
+	ipcRenderer.on("final-results", function(event,msg){
+		console.log("FINAL", msg)
+	})
+	ipcRenderer.on("partial-results", function(event, msg){
+		console.log("Partial", msg)
+	})
+
 })

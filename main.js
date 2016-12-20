@@ -6,8 +6,6 @@ const app = electron.app;
 
 const BrowserWindow = electron.BrowserWindow;
 
-
-
 let mainWindow;
 
 app.on('ready', function(){
@@ -30,7 +28,7 @@ app.on('ready', function(){
 
 })
 
-var listenProcess = spawn('node', ['./app/bgListener.js'], {detached: false})
+var listenProcess = spawn('node', ['./listen.js'], {detached: false})
 
 listenProcess.stderr.on('data', function (data) {
   var message = data.toString()
@@ -39,26 +37,21 @@ listenProcess.stderr.on('data', function (data) {
 
 listenProcess.stdout.on('data', function (data) {
 	var message = data.toString()
-	console.log(message)
-	if (message.startsWith('h')) {
-    	mainWindow.webContents.send('hotword', true)
-  	}
+	if (message.startsWith('!h:')) {
+	    mainWindow.webContents.send('hotword', true)
+	  } else if (message.startsWith('!p:')) {
+	    mainWindow.webContents.send('partial-results', message.substring(4))
+	  } else if (message.startsWith('!f:')) {
+	    mainWindow.webContents.send('final-results', message.substring(4))
+	  } else {
+	    console.error(message.substring(3))
+	  }
 })
-
-
-// kwsProcess.stdout.on('data', function (data) {
-//   var message = data.toString()
-//   if (message.startsWith('!h:')) {
-//     mainWindow.webContents.send('hotword', true)
-//   } else if (message.startsWith('!p:')) {
-//     mainWindow.webContents.send('partial-results', message.substring(4))
-//   } else if (message.startsWith('!f:')) {
-//     mainWindow.webContents.send('final-results', message.substring(4))
-//   } else {
-//     console.error(message.substring(3))
-//   }
-// })
 
 app.on('window-all-closed', function(){
 	app.quit();
+})
+
+app.on('will-quit', function () {
+  listenProcess.kill()
 })
