@@ -43,7 +43,7 @@ module.exports = function(){
 	})
 
 	socket.on('sleepy', function(msg){
-		peeqo_io.emit("sleepy","yes");
+		event.emit('do',null,'sleep')
 	})
 
 	socket.on('wakey', function(msg){
