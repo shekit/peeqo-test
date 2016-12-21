@@ -5,7 +5,7 @@ const event = require('js/events')
 	
 module.exports = function(){
 	var hueUrl = config.hue.ip+"/api/"+config.hue.user+"/lights/"
-	var bulbIds = ["2","3","4","5","6","7"]
+	var bulbIds = ["1,","2","3","4","5","6","7"]
 
 	var hue = {}
 
