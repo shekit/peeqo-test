@@ -85,8 +85,8 @@ module.exports = function() {
 					gif_category:"r_clapping",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:"happy",
-					led:null,
+					servo:null,
+					led:"blueBlink",
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
@@ -195,6 +195,7 @@ module.exports = function() {
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
+						event.emit("led","off")
 						event.emit("hue",false)
 					}
 				}
@@ -214,6 +215,7 @@ module.exports = function() {
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
+						event.emit("led","off")
 						event.emit("hue",true)
 					}
 				}

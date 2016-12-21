@@ -137,6 +137,12 @@ $(document).ready(function(){
 		else if(words.includes("pronounced") && words.includes("gif")){
 			event.emit('do',null,'gifJif')
 		}
+		else if(words.includes("gif") && words.includes("jif")){
+			event.emit('do',null,'gifJif')
+		}
+		else if(words.includes("say") && words.includes("gif")){
+			event.emit('do',null,'gifJif')
+		}
 		else if(words.includes("go") && words.includes("sleep")){
 			event.emit('do',null,'sleep')
 		}

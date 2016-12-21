@@ -38,7 +38,7 @@ module.exports = function(){
 				gif_category:"r_dunno",
 				gif_url: null,
 				gif_loop_forever: false,
-				servo:"no",
+				servo:null,
 				led:"error",
 				sound:null,
 				sound_loop_forever: false,
