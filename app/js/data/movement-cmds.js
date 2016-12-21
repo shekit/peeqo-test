@@ -8,10 +8,10 @@ module.exports = {
 				[94,91,89,88,87,92]
 			],
 		access_cmd:[
-				servoCmd.easing500.cmd
+				servoCmd.easing1000.cmd
 			],
 		duration: [
-				servoCmd.easing500.duration
+				servoCmd.easing1000.duration
 			]
 	},
 	alert: {
@@ -128,12 +128,12 @@ module.exports = {
 	no: {
 		desc:"",
 		angles:[
-				[93,93,93,93,93,93],		
-				[87,87,87,87,87,87],
-				[93,93,93,93,93,93],
+				[96,96,96,96,96,96],		
+				[84,84,84,84,84,84],
+				[96,96,96,96,96,96],
 			],
 		access_cmd:[
-				servoCmd.easing500.cmd,
+				servoCmd.easing1000.cmd,
 				servoCmd.easing1000.cmd,
 				servoCmd.easing1000.cmd,
 			],
