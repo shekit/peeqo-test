@@ -61,7 +61,7 @@ module.exports = function() {
 
 	servo.animateRaw = function(vals){
 		console.log(vals)
-		i2c.sendBuffer(servo.address, servoCmd.easing500.cmd, vals)
+		i2c.sendBuffer(servo.address, servoCmd.easing1000.cmd, vals)
 	}
 
 	function addMovementTimer(i, angles, commands, duration){
