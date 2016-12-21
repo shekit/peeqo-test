@@ -86,7 +86,7 @@ module.exports = function(){
 					gif_category:"r_hate",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:"lookaway",
+					servo:null,
 					led:null,
 					sound:null,
 					sound_loop_forever: false,
@@ -95,7 +95,7 @@ module.exports = function(){
 
 				setTimeout(function(){
 					event.emit("animate", anim)
-				},1000)
+				},1500)
 			}
 		}
 		event.emit("animate", obj)

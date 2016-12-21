@@ -4,6 +4,7 @@ $(document).ready(function(){
 	require('app-module-path').addPath(__dirname);
 	const path = require('path')
 	global.isSleeping = false
+	global.ledOn = false
 	const ipcRenderer = require('electron').ipcRenderer
 
 	const natural = require('natural')
@@ -42,6 +43,14 @@ $(document).ready(function(){
 
 	ipcRenderer.on("hotword", function(evt,arg){
 		console.log("HOTWORD",arg)
+		ledOn = true
+
+		setTimeout(function(){
+			if(ledOn == true){
+				event.emit("led", "off")
+			}
+		},3000)
+
 		if(isSleeping){
 			event.emit("led", "fadeRed")
 		} else {
@@ -62,6 +71,7 @@ $(document).ready(function(){
 	})
 	ipcRenderer.on("final-results", function(evt,msg){
 		console.log("FINAL", msg)
+		ledOn = false
 		tokenizeAndSend(msg.toLowerCase())
 		event.emit('led','success')
 	})
@@ -92,6 +102,9 @@ $(document).ready(function(){
 			event.emit('do',null,'playRock')
 		}
 		else if(words.includes("you") && words.includes("well")){
+			event.emit('do',null,'didWell')
+		}
+		else if(words.includes("you") && words.includes("awesome")){
 			event.emit('do',null,'didWell')
 		}
 		else if(words.includes("lights") && words.includes("off")){

@@ -20,10 +20,10 @@ module.exports = {
 				[65,115,65,115,65,115]
 			],
 		access_cmd:[
-				servoCmd.easingBounce.cmd
+				servoCmd.easing2000.cmd
 			],
 		duration: [
-				servoCmd.easingBounce.duration
+				servoCmd.easing2000.duration
 			]
 	},
 	sad: {
@@ -131,16 +131,16 @@ module.exports = {
 				[84,84,84,84,84,84]
 			],
 		access_cmd:[
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd
+				servoCmd.easing1000.cmd,
+				servoCmd.easing1000.cmd,
+				servoCmd.easing1000.cmd,
+				servoCmd.easing1000.cmd
 			],
 		duration: [
-				servoCmd.easing500.duration,
-				servoCmd.easing500.duration,
-				servoCmd.easing500.duration,
-				servoCmd.easing500.duration
+				servoCmd.easing1000.duration,
+				servoCmd.easing1000.duration,
+				servoCmd.easing1000.duration,
+				servoCmd.easing1000.duration
 			]
 	},
 
@@ -239,6 +239,18 @@ module.exports = {
 				[105,83,83,90,83,105],		
 				[94,91,89,88,87,92],
 				[105,83,83,90,83,105],		
+				[94,91,89,88,87,92],
+				[105,83,83,90,83,105],		
+				[94,91,89,88,87,92],
+				[105,83,83,90,83,105],		
+				[94,91,89,88,87,92],
+				[105,83,83,90,83,105],		
+				[94,91,89,88,87,92],
+				[105,83,83,90,83,105],		
+				[94,91,89,88,87,92],
+				[105,83,83,90,83,105],		
+				[94,91,89,88,87,92],
+				[105,83,83,90,83,105],		
 				[94,91,89,88,87,92]
 			],
 		access_cmd:[
@@ -247,9 +259,33 @@ module.exports = {
 				servoCmd.easing200.cmd,
 				servoCmd.easing200.cmd,
 				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd,
 				servoCmd.easing200.cmd
 			],
 		duration: [
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
+				servoCmd.easing200.duration,
 				servoCmd.easing200.duration,
 				servoCmd.easing200.duration,
 				servoCmd.easing200.duration,
