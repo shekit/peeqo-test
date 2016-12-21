@@ -60,7 +60,7 @@ $(document).ready(function(){
 				gif_url: null,
 				gif_loop_forever: false,
 				servo:"alert",
-				led:"alert",
+				led:null,
 				sound:"alert",
 				sound_loop_forever: false,
 				callback: null
