@@ -131,6 +131,9 @@ $(document).ready(function(){
 		else if(words.includes("go") && words.includes("reddit")){
 			event.emit('do',null,'blockReddit')
 		}
+		else if(words.includes("block") && words.includes("reddit")){
+			event.emit('do',null,'blockReddit')
+		}
 		else if(words.includes("pronounced") && words.includes("gif")){
 			event.emit('do',null,'gifJif')
 		}

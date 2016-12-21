@@ -8,10 +8,10 @@ module.exports = {
 				[94,91,89,88,87,92]
 			],
 		access_cmd:[
-				servoCmd.easing1000.cmd
+				servoCmd.easing500.cmd
 			],
 		duration: [
-				servoCmd.easing1000.duration
+				servoCmd.easing500.duration
 			]
 	},
 	alert: {
@@ -128,22 +128,19 @@ module.exports = {
 	no: {
 		desc:"",
 		angles:[
-				[96,96,96,96,96,96],		
-				[84,84,84,84,84,84],
-				[96,96,96,96,96,96],
-				[84,84,84,84,84,84]
+				[93,93,93,93,93,93],		
+				[87,87,87,87,87,87],
+				[93,93,93,93,93,93],
 			],
 		access_cmd:[
 				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd
+				servoCmd.easing1000.cmd,
+				servoCmd.easing1000.cmd,
 			],
 		duration: [
-				servoCmd.easing500.duration,
-				servoCmd.easing500.duration,
-				servoCmd.easing500.duration,
-				servoCmd.easing500.duration
+				servoCmd.easing1000.duration,
+				servoCmd.easing1000.duration,
+				servoCmd.easing1000.duration,
 			]
 	},
 
@@ -488,7 +485,13 @@ module.exports = {
 				[90,100,80,80,100,90],		
 				[90,80,100,100,80,90],
 				[90,100,80,80,100,90],		
-				[90,80,100,100,80,90]
+				[90,80,100,100,80,90],
+				[90,100,80,80,100,90],		
+				[90,80,100,100,80,90],
+				[90,100,80,80,100,90],		
+				[90,80,100,100,80,90],
+				[90,100,80,80,100,90],		
+				[90,80,100,100,80,90],
 			],
 		access_cmd:[
 				servoCmd.easing2000.cmd,
@@ -496,7 +499,13 @@ module.exports = {
 				servoCmd.easing2000.cmd,
 				servoCmd.easing500.cmd,
 				servoCmd.easing2000.cmd,
-				servoCmd.easing500.cmd
+				servoCmd.easing500.cmd,
+				servoCmd.easing2000.cmd,
+				servoCmd.easing500.cmd,
+				servoCmd.easing2000.cmd,
+				servoCmd.easing500.cmd,
+				servoCmd.easing2000.cmd,
+				servoCmd.easing500.cmd,
 			],
 		duration: [
 				servoCmd.easing2000.duration,
@@ -504,7 +513,13 @@ module.exports = {
 				servoCmd.easing2000.duration,
 				servoCmd.easing500.duration,
 				servoCmd.easing2000.duration,
-				servoCmd.easing500.duration
+				servoCmd.easing500.duration,
+				servoCmd.easing2000.duration,
+				servoCmd.easing500.duration,
+				servoCmd.easing2000.duration,
+				servoCmd.easing500.duration,
+				servoCmd.easing2000.duration,
+				servoCmd.easing500.duration,
 			]
 	}
 }

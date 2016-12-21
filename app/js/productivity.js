@@ -31,7 +31,7 @@ module.exports = function(){
 			gif_url: null,
 			gif_loop_forever: false,
 			servo:"angry",
-			led:"fadeRed",
+			led:"error",
 			sound:null,
 			sound_loop_forever: false,
 			callback: function(){
@@ -48,6 +48,7 @@ module.exports = function(){
 				}
 
 				setTimeout(function(){
+					event.emit("led, off")
 					event.emit("animate", anim)
 				},1200)
 			}

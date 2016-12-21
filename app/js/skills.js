@@ -104,7 +104,7 @@ module.exports = function() {
 
 						setTimeout(function(){
 							event.emit("animate", anim)
-						},200)
+						},1000)
 					}
 				}
 				event.emit("animate", obj)
@@ -190,7 +190,7 @@ module.exports = function() {
 					gif_category:"r_gotit",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:"yes",
+					servo:null,
 					led:"success",
 					sound:null,
 					sound_loop_forever: false,
@@ -209,7 +209,7 @@ module.exports = function() {
 					gif_category:"r_gotit",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:"yes",
+					servo:null,
 					led:"success",
 					sound:null,
 					sound_loop_forever: false,
