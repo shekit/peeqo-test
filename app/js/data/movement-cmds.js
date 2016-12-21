@@ -173,9 +173,9 @@ module.exports = {
 				[83,94,94,90,94,83]
 			],
 		access_cmd:[
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd,
-				servoCmd.easing500.cmd
+				servoCmd.easing1000.cmd,
+				servoCmd.easing200.cmd,
+				servoCmd.easing200.cmd
 			],
 		duration: [
 				servoCmd.easing500.duration,
