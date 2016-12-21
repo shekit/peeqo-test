@@ -5,6 +5,64 @@ var socket = io(config.peeqo.server + '/peeqo')
 
 module.exports = function(){
 
+
+	socket.on('gifjif', function(msg){
+		event.emit('do',null,'gifJif')
+	})
+
+	socket.on('cameraOn', function(msg){
+		event.emit('do',null,'cameraOn')
+	})
+
+	socket.on('cameraOff', function(msg){
+		event.emit('do',null,'cameraOff')
+	})
+
+	socket.on('actMusic', function(msg){
+		event.emit('do',null,'addSkill')
+	})
+
+	socket.on('playBeatles', function(msg){
+		event.emit('do',null,'playBeatles')
+	})
+
+	socket.on('playRock', function(msg){
+		event.emit('do',null,'playRock')
+	})
+
+	socket.on('blockReddit', function(msg){
+		event.emit('do',null,'blockReddit')
+	})
+
+	socket.on('sayNo', function(msg){
+		event.emit('do',null,'unknown')
+	})
+
+	socket.on('byebye', function(msg){
+		event.emit('do',null,'sayBye')
+	})
+
+	socket.on('sleepy', function(msg){
+		peeqo_io.emit("sleepy","yes");
+	})
+
+	socket.on('wakey', function(msg){
+		event.emit('do',null,'wakeUp')
+	})
+
+	socket.on('didWell', function(msg){
+		event.emit('do',null,'didWell')
+	})
+
+	socket.on('offLights', function(msg){
+		event.emit('do',null,'lightsOff')
+	})
+
+	socket.on('onLights', function(msg){
+		event.emit('do',null,'lightsOn')
+	})
+
+
 	socket.on("shutdown", function(msg){
 		event.emit("shutdown")
 	})
