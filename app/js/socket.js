@@ -108,7 +108,7 @@ module.exports = function(){
 			gif_url: null,
 			gif_loop_forever: false,
 			servo:"lookup",
-			led:"blueBlink",
+			led:null,
 			sound:null,
 			sound_loop_forever: true,
 			callback: null
