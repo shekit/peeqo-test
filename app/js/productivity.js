@@ -41,7 +41,7 @@ module.exports = function(){
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"lookup",
-					led: "error",
+					led: null,
 					sound:null,
 					sound_loop_forever: false,
 					callback: null
@@ -49,7 +49,7 @@ module.exports = function(){
 
 				setTimeout(function(){
 					event.emit("animate", anim)
-				},1000)
+				},1200)
 			}
 		}
 

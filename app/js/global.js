@@ -52,7 +52,7 @@ $(document).ready(function(){
 		},3000)
 
 		if(isSleeping){
-			event.emit("led", "fadeRed")
+			//event.emit("led", "fadeRed")
 		} else {
 			var obj = {
 				gif_type:null,  //local/remote/null
@@ -71,9 +71,10 @@ $(document).ready(function(){
 	})
 	ipcRenderer.on("final-results", function(evt,msg){
 		console.log("FINAL", msg)
+		event.emit('led','off')
 		ledOn = false
 		tokenizeAndSend(msg.toLowerCase())
-		event.emit('led','success')
+		
 	})
 	ipcRenderer.on("partial-results", function(evt, msg){
 		console.log("Partial", msg)

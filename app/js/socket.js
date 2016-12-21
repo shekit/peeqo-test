@@ -415,7 +415,7 @@ module.exports = function(){
 			gif_url: msg,
 			gif_loop_forever: false,
 			servo:null,
-			led:"success",
+			led:null,
 			sound:null,
 			sound_loop_forever: false
 		}

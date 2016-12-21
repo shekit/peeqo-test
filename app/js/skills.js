@@ -143,7 +143,7 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"curious",
-					led:"blueBlink",
+					led:null,
 					sound:null,
 					sound_loop_forever: false,
 					callback: null
@@ -159,7 +159,7 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"curious",
-					led:"blueBlink",
+					led:null,
 					sound:null,
 					sound_loop_forever: false,
 					callback:null
@@ -175,7 +175,7 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"curious",
-					led:"blueBlink",
+					led:null,
 					sound:null,
 					sound_loop_forever: false,
 					callback:null
@@ -315,8 +315,8 @@ module.exports = function() {
 					gif_category:"r_canthear",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:null,
-					led:"error",
+					servo:"no",
+					led: null,
 					sound:null,
 					sound_loop_forever: false,
 					callback:null
