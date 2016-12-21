@@ -82,6 +82,9 @@ $(document).ready(function(){
 		else if(words.includes("activate") && words.includes("spotify")){
 			event.emit('do',null,'addSkill')
 		}
+		else if(words.includes("play") && words.includes("music")){
+			event.emit('do',null,'playBeatles')
+		}
 		else if(words.includes("play") && words.includes("beatles")){
 			event.emit('do',null,'playBeatles')
 		}
@@ -97,10 +100,18 @@ $(document).ready(function(){
 		else if(words.includes("lights") && words.includes("on")){
 			event.emit('do',null,'lightsOn')
 		}
+		else if(words.includes("goodbye") && words.includes("everyone")){
+			console.log("GOODBYE")
+			event.emit('do',null,'sayBye')
+		}
 		else if(words.includes("bye") && words.includes("everyone")){
+			console.log("GOODBYE")
 			event.emit('do',null,'sayBye')
 		}
 		else if(words.includes("say") && words.includes("hi")){
+			event.emit('do',null,'greetPublic')
+		}
+		else if(words.includes("hi") && words.includes("everyone")){
 			event.emit('do',null,'greetPublic')
 		}
 		else if(words.includes("go") && words.includes("reddit")){

@@ -59,7 +59,7 @@ module.exports = function(){
 			gif_loop_forever: true,
 			servo:"tickle",
 			led:null,
-			sound:"laugh",
+			sound:null,
 			sound_loop_forever: true,
 			callback: null
 		}

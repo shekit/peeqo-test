@@ -32,7 +32,7 @@ module.exports = function(){
 			gif_loop_forever: false,
 			servo:"angry",
 			led:"fadeRed",
-			sound:"angry",
+			sound:null,
 			sound_loop_forever: false,
 			callback: function(){
 				var anim = {

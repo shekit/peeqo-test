@@ -168,6 +168,22 @@ module.exports = function() {
 				event.emit("animate", obj)
 				break
 
+			case 'sayBye':
+				var obj = {
+					gif_type:"local",  //local/remote
+					gif_category:"r_bye",
+					gif_url: null,
+					gif_loop_forever: false,
+					servo:"curious",
+					led:"blueBlink",
+					sound:null,
+					sound_loop_forever: false,
+					callback:null
+				}
+
+				event.emit("animate", obj)
+				break
+
 			case 'lightsOff':
 				var obj = {
 					gif_type:"local",  //local/remote
@@ -204,6 +220,8 @@ module.exports = function() {
 
 				event.emit("animate", obj)
 				break
+
+
 
 			case 'playBeatles':
 				event.emit("play-music","beatles","sway")
@@ -291,7 +309,7 @@ module.exports = function() {
 				event.emit("learn","spotify")
 				break
 
-			case 'input.unknown':
+			case 'unknown':
 				var obj = {
 					gif_type:"local",  //local/remote
 					gif_category:"r_canthear",
