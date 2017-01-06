@@ -17,7 +17,9 @@ module.exports = function() {
 					led:"greenBlink",
 					sound:null,
 					sound_loop_forever: false,
-					callback: null
+					callback: function(){
+						event.emit("led","off")
+					}
 				}
 
 			event.emit("animate", obj)
@@ -53,10 +55,11 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"abouttime",
-					led:null,
+					led:"fadeRed",
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
+						event.emit("led","off")
 						event.emit("block-site","reddit",true)
 
 						var anim = {
@@ -85,11 +88,12 @@ module.exports = function() {
 					gif_category:"r_clapping",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:null,
+					servo:"lookup",
 					led:"blueBlink",
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
+						event.emit("led","off")
 						var anim = {
 							gif_type:"local",  //local/remote
 							gif_category:"r_youtoo",
@@ -159,10 +163,12 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"curious",
-					led:null,
+					led:"greenBlink",
 					sound:null,
 					sound_loop_forever: false,
-					callback:null
+					callback: function(){
+						event.emit("led","off")
+					}
 				}
 
 				event.emit("animate", obj)
@@ -175,10 +181,12 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"curious",
-					led:null,
+					led:"blueBlink",
 					sound:null,
 					sound_loop_forever: false,
-					callback:null
+					callback: function(){
+						event.emit("led","off")
+					}
 				}
 
 				event.emit("animate", obj)
@@ -190,7 +198,7 @@ module.exports = function() {
 					gif_category:"r_gotit",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:null,
+					servo:"nod",
 					led:"success",
 					sound:null,
 					sound_loop_forever: false,
@@ -210,7 +218,7 @@ module.exports = function() {
 					gif_category:"r_gotit",
 					gif_url: null,
 					gif_loop_forever: false,
-					servo:null,
+					servo:"nod",
 					led:"success",
 					sound:null,
 					sound_loop_forever: false,
@@ -258,10 +266,11 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"wakeup",
-					led:null,
+					led:"blueBlink",
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
+						event.emit("led","off")
 						event.emit("start-fast-blink")
 
 						var anim = {
@@ -295,6 +304,7 @@ module.exports = function() {
 					sound:null,
 					sound_loop_forever: false,
 					callback: function(){
+						event.emit("led","off")
 						event.emit("take-picture", false)
 					}
 				}
@@ -318,10 +328,12 @@ module.exports = function() {
 					gif_url: null,
 					gif_loop_forever: false,
 					servo:"no",
-					led: null,
+					led: "error",
 					sound:null,
 					sound_loop_forever: false,
-					callback:null
+					callback:function(){
+						event.emit("led","off")
+					}
 				}
 
 				event.emit("animate", obj)

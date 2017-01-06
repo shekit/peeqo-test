@@ -35,6 +35,7 @@ module.exports = function(){
 			sound:null,
 			sound_loop_forever: false,
 			callback: function(){
+				event.emit("led","off")
 				var anim = {
 					gif_type:"local",  //local/remote
 					gif_category:"r_warning",

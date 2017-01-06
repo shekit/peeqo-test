@@ -38,11 +38,13 @@ module.exports = function(){
 				gif_category:"r_dunno",
 				gif_url: null,
 				gif_loop_forever: false,
-				servo:null,
+				servo:"confused",
 				led:"error",
 				sound:null,
 				sound_loop_forever: false,
-				callback:null
+				callback: function(){
+					event.emit("led","off")
+				}
 			}
 			event.emit("animate", obj)
 		}
