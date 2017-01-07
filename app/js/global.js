@@ -114,11 +114,11 @@ $(document).ready(function(){
 		else if(words.includes("lights") && words.includes("on")){
 			event.emit('do',null,'lightsOn')
 		}
-		else if(words.includes("goodbye") && words.includes("everyone")){
+		else if(words.includes("please") && words.includes("goodbye") && words.includes("everyone")){
 			console.log("GOODBYE")
 			event.emit('do',null,'sayBye')
 		}
-		else if(words.includes("bye") && words.includes("everyone")){
+		else if(words.includes("please") && words.includes("bye") && words.includes("everyone")){
 			console.log("GOODBYE")
 			event.emit('do',null,'sayBye')
 		}
