@@ -17,12 +17,6 @@ const apiAi = require('js/api.ai')()
 
 module.exports = function(){
 
-	//**** API AI ****//
-	event.on("listen", function(){
-		apiAi.start()
-	})
-	//**** END API AI ****//
-
 	//**** EYES ****//
 	event.on('start-blinking', function(){
 		console.log("EYES - BLINK")
