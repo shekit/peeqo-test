@@ -15,6 +15,7 @@ module.exports = function(){
 
 	peeqoEyes.eyeSize = 87.5
 	peeqoEyes.closedEye = 1
+	peeqoEyes.sleepEye = 10
 	peeqoEyes.closeEyeDuration = 120;
 	peeqoEyes.openEyeDuration = 200;
 	peeqoEyes.fastCloseEyeDuration = 90;
@@ -97,9 +98,9 @@ module.exports = function(){
 			event.emit("stop-blinking")
 		}
 		
-		peeqoEyes.left_eye.animate({ry:peeqoEyes.closedEye}, peeqoEyes.closeEyeDuration,mina.elastic())
+		peeqoEyes.left_eye.animate({ry:peeqoEyes.sleepEye}, peeqoEyes.closeEyeDuration,mina.elastic())
 
-		peeqoEyes.right_eye.animate({ry:peeqoEyes.closedEye}, peeqoEyes.closeEyeDuration,mina.elastic())
+		peeqoEyes.right_eye.animate({ry:peeqoEyes.sleepEye}, peeqoEyes.closeEyeDuration,mina.elastic())
 	}
 
 	peeqoEyes.blink = function(){
