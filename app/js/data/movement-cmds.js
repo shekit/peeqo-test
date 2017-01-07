@@ -192,16 +192,16 @@ module.exports = {
 				[80,95,95,90,95,80],
 			],
 		access_cmd:[
-				servoCmd.easing200.cmd,
-				servoCmd.easing200.cmd,
-				servoCmd.easing200.cmd,
-				servoCmd.easing200.cmd
+				servoCmd.easing500.cmd,
+				servoCmd.easing500.cmd,
+				servoCmd.easing500.cmd,
+				servoCmd.easing500.cmd
 			],
 		duration: [
-				servoCmd.easing200.duration,
-				servoCmd.easing200.duration,
-				servoCmd.easing200.duration,
-				servoCmd.easing200.duration
+				servoCmd.easing500.duration,
+				servoCmd.easing500.duration,
+				servoCmd.easing500.duration,
+				servoCmd.easing500.duration
 			]
 	},
 	musicSway: {
