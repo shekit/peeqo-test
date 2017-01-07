@@ -64,10 +64,12 @@ module.exports = function(){
 
 
 	socket.on("shutdown", function(msg){
+		console.log("shutdown")
 		event.emit("shutdown")
 	})
 
 	socket.on("reboot", function(msg){
+		console.log("reboot")
 		event.emit("reboot")
 	})
 
