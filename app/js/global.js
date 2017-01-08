@@ -52,7 +52,7 @@ $(document).ready(function(){
 		},3000)
 
 		if(isSleeping){
-			//event.emit("led", "fadeRed")
+			event.emit("led", "fadeRed")
 		} else {
 			var obj = {
 				gif_type:null,  //local/remote/null
