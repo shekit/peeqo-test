@@ -80,7 +80,7 @@ module.exports = function(){
 			gif_category:"r_clapping",
 			gif_url: null,
 			gif_loop_forever: false,
-			servo:"lookup",
+			servo:"happy",
 			led:"blueBlink",
 			sound:null,
 			sound_loop_forever: false,
