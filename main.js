@@ -28,7 +28,7 @@ app.on('ready', function(){
 
 })
 
-var listenProcess = spawn('node', ['./listen.js'], {detached: false})
+/*var listenProcess = spawn('node', ['./listen.js'], {detached: false})
 
 listenProcess.stderr.on('data', function (data) {
   var message = data.toString()
@@ -48,10 +48,11 @@ listenProcess.stdout.on('data', function (data) {
 	  }
 })
 
+app.on('will-quit', function () {
+  listenProcess.kill()
+})*/
+
 app.on('window-all-closed', function(){
 	app.quit();
 })
 
-app.on('will-quit', function () {
-  listenProcess.kill()
-})
