@@ -23,7 +23,7 @@
     "natural": "^0.4.0",
     "shortid": "^2.2.6",
     "snapsvg": "^0.4.0",
-    "sonus": "^0.1.2",
+    "sonus": "^0.1.5",
     "spotify-web-api-js": "^0.21.1",
     "wifi-control": "^2.0.0"
   }
